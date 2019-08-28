@@ -80,7 +80,7 @@
               <div class="col"></div>
               <div class="col-lg-6 col-sm-12" style="margin-right: 40px;">
                 <div class="card">
-                  <li class="list-group-item">Cras justo odio</li>
+                  <li class="list-group-item">courses in cart count: [0]</li>
                 </div>
               </div>
             </div>
@@ -151,12 +151,12 @@
           <div class="col-sm-6">
             <div class="card courses">
               <img
-                src="best-course2.png"
+                src="<%= render_object1[0].image_link %>"
                 class="card-img-top"
                 alt="best-course2"
               />
               <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
+                <h5 class="card-title"> <%= render_object1[0].course_name %> </h5>
                 <p class="card-text">
                   With supporting text below as a natural lead-in to additional
                   content.

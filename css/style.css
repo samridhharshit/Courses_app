@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0 20px;
-  background-color: black;
+  /* background-color: black; */
 }
 
 img.ebay {
@@ -37,10 +37,6 @@ div.courses {
   text-align: center;
 }
 
-h1 {
-  color: blanchedalmond;
-}
-
 div.footer {
     margin: 20px;
   display: flex;
@@ -53,5 +49,8 @@ div.info {
   text-align: center;
   align-items: initial;
   line-height: 2rem;
-  color: antiquewhite;
+}
+
+div.card {
+  border: 3px solid #3e155e;
 }
