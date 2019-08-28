@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  padding: 0 20px;
+  background-color: black;
+}
+
+img.ebay {
+  width: 30%;
+  height: 145px;
+}
+
+div.logo-section {
+  max-height: 145px;
+}
+
+nav.third-nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+img.carosal {
+  display: block;
+  width: 100%;
+  margin: auto;
+  height: 500px;
+  width: 1000px;
+}
+
+img.card-img-top {
+  display: block;
+  margin: auto;
+  width: 200px;
+  height: 200px;
+}
+
+div.courses {
+  text-align: center;
+}
+
+h1 {
+  color: blanchedalmond;
+}
+
+div.footer {
+    margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+div.info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: initial;
+  line-height: 2rem;
+  color: antiquewhite;
+}
