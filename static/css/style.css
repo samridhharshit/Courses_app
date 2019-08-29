@@ -67,7 +67,7 @@ p.price {
   background-color: yellow;
 }
 
-a.direct {
+a.direct,a.remove {
   display: flex;
   align-items: center;
 }
