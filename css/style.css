@@ -54,3 +54,20 @@ div.info {
 div.card {
   border: 3px solid #3e155e;
 }
+
+div.price {
+  display: flex;
+  justify-content: space-between;
+}
+
+p.price {
+  padding: 10px;
+  border: 2px solid #3e155e;
+  border-radius: 10px;
+  background-color: yellow;
+}
+
+a.direct {
+  display: flex;
+  align-items: center;
+}

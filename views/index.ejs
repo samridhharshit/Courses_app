@@ -145,40 +145,48 @@
         </div>
       </div>
 
+      <!-- ############################################################################## -->
       <!-- Best Courses-content -->
+
       <div class="best-courses">
         <div class="row">
           <div class="col-sm-6">
             <div class="card courses">
               <img
-                src="<%= render_object1[0].image_link %>"
+                src="<%= obj.rated[0].image_link %>"
                 class="card-img-top"
                 alt="best-course2"
               />
               <div class="card-body">
-                <h5 class="card-title"> <%= render_object1[0].course_name %> </h5>
+                <h5 class="card-title"><%= obj.rated[0].course_name %></h5>
                 <p class="card-text">
-                  With supporting text below as a natural lead-in to additional
-                  content.
+                  <%= obj.rated[0].description %>
                 </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <!-- price -->
+                <div class="price">
+                  <p class="price"> ₹<%= obj.rated[0].price %></p>
+                  <a href="#" class="btn btn-primary direct">Go somewhere</a>
+                </div>
               </div>
             </div>
           </div>
           <div class="col-sm-6">
             <div class="card courses">
               <img
-                src="best-course1.png"
+                src="<%= obj.rated[1].image_link %>"
                 class="card-img-top"
                 alt="best-course1"
               />
               <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
+                <h5 class="card-title"><%= obj.rated[1].course_name %></h5>
                 <p class="card-text">
-                  With supporting text below as a natural lead-in to additional
-                  content.
+                  <%= obj.rated[1].description %>
                 </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <!-- price -->
+                <div class="price">
+                  <p class="price"> ₹<%= obj.rated[1].price %></p>
+                  <a href="#" class="btn btn-primary direct">Go somewhere</a>
+                </div>
               </div>
             </div>
           </div>
@@ -196,40 +204,48 @@
         </div>
       </div>
 
+      <!-- ############################################################################# -->
       <!-- Latest Courses-content -->
+
       <div class="latest-courses">
         <div class="row">
           <div class="col-sm-6">
             <div class="card courses">
               <img
-                src="best-course2.png"
+                src="<%= obj.latest[0].image_link %>"
                 class="card-img-top"
                 alt="best-course2"
               />
               <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
+                <h5 class="card-title"><%= obj.latest[0].course_name %></h5>
                 <p class="card-text">
-                  With supporting text below as a natural lead-in to additional
-                  content.
+                  <%= obj.latest[0].description %>
                 </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <!-- price -->
+                <div class="price">
+                  <p class="price"> ₹<%= obj.latest[0].price %></p>
+                  <a href="#" class="btn btn-primary direct">Go somewhere</a>
+                </div>
               </div>
             </div>
           </div>
           <div class="col-sm-6">
             <div class="card courses">
               <img
-                src="best-course1.png"
+                src="<%= obj.latest[1].image_link %>"
                 class="card-img-top"
                 alt="best-course1"
               />
               <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
+                <h5 class="card-title"><%= obj.latest[1].course_name %></h5>
                 <p class="card-text">
-                  With supporting text below as a natural lead-in to additional
-                  content.
+                  <%= obj.latest[1].description %>
                 </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <!-- price -->
+                <div class="price">
+                  <p class="price"> ₹<%= obj.latest[1].price %></p>
+                  <a href="#" class="btn btn-primary direct">Go somewhere</a>
+                </div>
               </div>
             </div>
           </div>
@@ -246,41 +262,48 @@
           </div>
         </div>
       </div>
-
+      <!-- ####################################################################################### -->
       <!-- On-sale Courses-content -->
+
       <div class="latest-courses">
         <div class="row">
           <div class="col-sm-6">
             <div class="card courses">
               <img
-                src="best-course2.png"
+                src="<%= obj.price[0].image_link %>"
                 class="card-img-top"
                 alt="best-course2"
               />
               <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
+                <h5 class="card-title"><%= obj.price[0].course_name %></h5>
                 <p class="card-text">
-                  With supporting text below as a natural lead-in to additional
-                  content.
+                  <%= obj.price[0].description %>
                 </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <!-- price -->
+                <div class="price">
+                  <p class="price">₹<%= obj.price[0].price %></p>
+                  <a href="#" class="btn btn-primary direct">Go somewhere</a>
+                </div>
               </div>
             </div>
           </div>
           <div class="col-sm-6">
             <div class="card courses">
               <img
-                src="best-course1.png"
+                src="<%= obj.price[1].image_link %>"
                 class="card-img-top"
                 alt="best-course1"
               />
               <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
+                <h5 class="card-title"><%= obj.price[1].course_name %></h5>
                 <p class="card-text">
-                  With supporting text below as a natural lead-in to additional
-                  content.
+                  <%= obj.price[1].description %>
                 </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <!-- price -->
+                <div class="price">
+                  <p class="price">₹<%= obj.price[1].price %></p>
+                  <a href="#" class="btn btn-primary direct">Go somewhere</a>
+                </div>
               </div>
             </div>
           </div>
@@ -318,6 +341,7 @@
       </div>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   </body>
 </html>

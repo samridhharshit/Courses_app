@@ -16,6 +16,7 @@ app.use(express.static("css"));
 
 var mysql = require('mysql');
 
+var q = require('q');
 
 
 var con = mysql.createConnection({
@@ -33,29 +34,47 @@ con.connect(function (err) {
 
 app.listen(port, () => { console.log(`listening to port ${port}!`) })
 
-app.get('/',(req,res)=> {
-    con.query('select * from courses', (err,rows,fields)=> {
-        if(err) console.log('error found');
-        
-        const highest_rated = [];
-        for(var item in rows) {
-            highest_rated.push(rows[item].rating);
-            highest_rated.sort();
-            highest_rated.reverse();
-            // console.log(rows[item].rating);
-        }
-        const highest=highest_rated.slice(0,2)
-        
-        const object = [];
+var obj = {};
 
-        for(var i in rows ) {
-            if(rows[i].rating === highest[0]) {
-                object.push(rows[i]);
+app.get('/', (req, res) => {
+    con.query('select * from courses Order by rating desc limit 2', (err, rating, fields) => {
+        if (err) {
+            console.log('error found');
+        } else {
+            obj = {
+                rated: rating
             }
-        }
-        const render_object1 = object.slice(0,2);
-        console.log(render_object1);
 
-        res.render('index',{render_object1});
+            con.query('select * from courses Order by release_date desc limit 2', (err, newest, field) => {
+
+                if (err) {
+                    console.log('error found');
+                } else {
+                    latest: newest
+
+                    con.query('select * from courses Order by price desc limit 2', (err, money, field) => {
+                        if (err) {
+                            console.log('error found');
+                        } else {
+                            price: money
+                            //After successful completion of all 3 queries send data back to cliend(front-end)
+                            //its better to create new obj everytime and send it
+                            //store all the data in obj and send back to client
+                            var obj = {};
+                            obj.rated = rating;
+                            obj.latest = newest;
+                            obj.price = money;
+                            console.log(obj);
+                            res.render('index', { obj });
+                        }
+                    })
+                }
+            })
+
+        }
     })
+
+    //Either above one could be rendered or below one both cannot be rendered. what to do?
+
+
 })
