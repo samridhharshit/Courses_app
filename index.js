@@ -12,7 +12,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.use(express.static("public/images/"));
-app.use(express.static("css"));
+app.use(express.static("static"));
 
 var mysql = require('mysql');
 
